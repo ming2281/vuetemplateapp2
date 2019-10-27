@@ -1,12 +1,25 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Todo />
   </div>
 </template>
+
+
+<script>
+  import Todo from "./pages/Todo";
+
+  export default {
+    name: "App",
+
+    // 依赖的组件
+    components: {
+      Todo,
+    },
+
+
+
+  }
+</script>
 
 <style lang="less">
 #app {
