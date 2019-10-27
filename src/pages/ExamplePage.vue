@@ -1,5 +1,11 @@
 <template>
+    <div>
+        <div v-for="todo in this.todos" :key="todo.id">
+            {{todo.title}}
+        </div>
 
+
+    </div>
 </template>
 
 <script>
@@ -11,6 +17,14 @@
             //     type: Number,
             //     required: true,
             //     default: 0,
+            //     validator: function(val) {
+            //         return [
+            //             "syncint",
+            //             'synced',
+            //             'version-conflict',
+            //             'error'
+            //         ].indexOf(val) !== -1
+            //     }
             // }
         },
 
@@ -21,14 +35,39 @@
 
         // this 的属性
         data() {
-            return {}
+            return {
+                todos: [
+                    {
+                        id: 1,
+                        title: '1'
+                    }
+                ]
+            }
         },
         computed: {},
         watch: {},
 
 
         // 方法
-        methods: {}
+        methods: {},
+
+        // 钩子函数
+        // beforeCreate() {
+        // },
+        // created() {
+        // },
+        // beforeMount() {
+        // },
+        // mounted() {
+        // },
+        // beforeUpdate() {
+        // },
+        // updated() {
+        // },
+        // beforeDestroy() {
+        // },
+        // destroyed() {
+        // },
     }
 </script>
 
